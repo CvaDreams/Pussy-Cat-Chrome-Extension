@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Pussy Cat",
+  "description": "Did the cat follows the cursor",
+  "version": "0.1",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_security_policy": "script-src 'self' https://api.forismatic.com/api/; object-src 'self' "
+}

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  object-fit: contain;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.svg__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 113%;
+  margin: 20px auto;
+  margin-bottom: 350px;
+  overflow: hidden;
+}
+
+.balls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transform-origin: right-bottom;
+  transform-box: fill-box;
+}
+
+#tail {
+  animation: move 3s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes move {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(65deg);
+  }
+}
+
+/* quotes */
+.quotes,
+.loading {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 60px;
+  background-image: linear-gradient(to right, #0099f7, #f11712);
+  background-clip: text;
+  /* here the magic comes */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
